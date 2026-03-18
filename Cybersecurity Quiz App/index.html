@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="matrix-bg"></div>
+    <div class="content-overlay"></div>
+    
+    <!-- Home Page -->
+    <div id="home" class="screen active">
+        <header>
+            <h1 class="glitch" data-text="CYBERSECURITY QUIZ">CYBERSECURITY QUIZ</h1>
+            <p class="subtitle glitch" data-text="TEST YOUR HACKING KNOWLEDGE">TEST YOUR HACKING KNOWLEDGE</p>
+        </header>
+        
+        <div class="categories">
+            <div class="category-card" data-level="basic">
+                <div class="level-icon green">🟢</div>
+                <h3>BASIC LEVEL</h3>
+                <p>Levels 1-100</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" data-level="basic"></div>
+                </div>
+            </div>
+            <div class="category-card" data-level="standard">
+                <div class="level-icon yellow">🟡</div>
+                <h3>STANDARD LEVEL</h3>
+                <p>Levels 1-100</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" data-level="standard"></div>
+                </div>
+            </div>
+            <div class="category-card" data-level="master">
+                <div class="level-icon red">🔴</div>
+                <h3>MASTER LEVEL</h3>
+                <p>Levels 1-50</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" data-level="master"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div id="quiz" class="screen">
+        <div class="top-bar">
+            <div class="level-info">
+                <span id="current-level"></span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar quiz-progress">
+                    <div class="progress-fill quiz-progress-fill" id="quiz-progress"></div>
+                </div>
+                <span id="score">Score: 0</span>
+            </div>
+        </div>
+        
+        <div class="quiz-container">
+            <div class="question-container">
+                <div class="question-number">Q<span id="question-num">1</span></div>
+                <h2 id="question-text" class="question-text typewrite"></h2>
+            </div>
+            
+            <div class="options" id="options">
+                <!-- Options will be inserted here -->
+            </div>
+            
+            <div class="controls">
+                <button id="next-btn" class="next-btn" disabled>>> NEXT <<<</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Completion Modal -->
+    <div id="completion-modal" class="modal">
+        <div class="modal-content">
+            <div class="particles"></div>
+            <h2>CONGRATULATIONS! 🎉</h2>
+            <p id="final-score"></p>
+            <p id="level-completed"></p>
+            <div class="modal-buttons">
+                <button id="next-level-btn" class="hack-btn green">> NEXT LEVEL <<<</button>
+                <button id="home-btn" class="hack-btn">>> HOME <<<</button>
+            </div>
+        </div>
+    </div>
+
+<script src="data.js"></script>
+<script src="quiz.js"></script>
+</body>
+</html>
